@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "997877f2-070b-4657-8b9d-0ea862463670",
+		"name": "Somvoba API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4435021"
+	},
+	"item": [
+		{
+			"name": "send sms",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "mobile",
+							"value": "01212121212",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://somvoba-express-api.onrender.com/api/v1/authentications/signin",
+					"protocol": "https",
+					"host": [
+						"somvoba-express-api",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"authentications",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verify",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "mobile",
+							"value": "01212121212",
+							"type": "text"
+						},
+						{
+							"key": "otp",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "fcm_token",
+							"value": "test",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://somvoba-express-api.onrender.com/api/v1/authentications/verify-otp-reserve",
+					"protocol": "https",
+					"host": [
+						"somvoba-express-api",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"authentications",
+						"verify-otp-reserve"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "up the api",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://somvoba-express-api.onrender.com/",
+					"protocol": "https",
+					"host": [
+						"somvoba-express-api",
+						"onrender",
+						"com"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
